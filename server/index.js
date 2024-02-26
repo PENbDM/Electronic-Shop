@@ -45,19 +45,19 @@ app.post("/payment", cors(), async (req, res) => {
 });
 // error handler
 app.use(errorHandler);
-const start = async () => {
+export const start = async () => {
   try {
     await sequelize.authenticate();
     await sequelize.sync();
     app.listen(PORT, () => {
-      console.log(`Sserver has started on port ${PORT}`);
+      console.log(`Server has started on port ${PORT}`);
     });
   } catch (err) {
     console.log(err);
   }
 };
-start();
 
+export default app; // export the express app
 // old request
 // app.post("/laptop", async (req, res) => {
 //   try {
