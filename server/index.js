@@ -56,7 +56,7 @@ export const start = async () => {
     console.log(err);
   }
 };
-
+start();
 export default app; // export the express app
 // old request
 // app.post("/laptop", async (req, res) => {
