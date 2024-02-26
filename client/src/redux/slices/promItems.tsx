@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../store";
-
+import { URL_ELEPHANT } from "../../utils/url";
 interface Product {
   id: number;
   name: string;
@@ -39,7 +39,7 @@ export const fetchAllProducts = createAsyncThunk(
   "promItems/fetchAllProducts",
   async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/product");
+      const response = await axios.get(`${URL_ELEPHANT}/api/product`);
       return response.data.rows as Product[];
     } catch (error) {
       console.error("Error fetching laptops:", error);
@@ -52,7 +52,7 @@ export const fetchAllTypes = createAsyncThunk(
   "promItems/fetchAllTypes",
   async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/type");
+      const response = await axios.get(`${URL_ELEPHANT}/api/type`);
 
       return response.data as Type[];
     } catch (error) {
@@ -66,7 +66,7 @@ export const fetchAllBrands = createAsyncThunk(
   "promItems/fetchAllBrands",
   async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/brand");
+      const response = await axios.get(`${URL_ELEPHANT}/api/brand`);
 
       return response.data as Brand[];
     } catch (error) {
@@ -80,7 +80,7 @@ export const fetchByType = createAsyncThunk(
   "promItems/fetchByType",
   async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/product");
+      const response = await axios.get(`${URL_ELEPHANT}/api/product`);
       return response.data.rows as Product[];
     } catch (error) {
       console.error("Error fetching laptops:", error);

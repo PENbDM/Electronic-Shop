@@ -17,6 +17,8 @@ import { updateCartItemQuantity } from "../../redux/slices/cartSlice";
 import { addToCart } from "../../redux/slices/cartSlice";
 import { fetchAllItemsCart } from "../../redux/slices/cartSlice";
 import FullScreenLoader from "../../components/ReactSkeletonFull/SkeletonFull";
+import { URL_ELEPHANT } from "../../utils/url";
+
 interface Product {
   id: number;
   name: string;
@@ -58,9 +60,7 @@ function ProductPage() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:5000/api/product/${id}`
-        );
+        const response = await axios.get(`${URL_ELEPHANT}/api/product/${id}`);
         setProduct(response.data);
       } catch (error) {
         console.error("Error fetching product:", error);

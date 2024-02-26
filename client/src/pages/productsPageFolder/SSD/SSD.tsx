@@ -14,6 +14,8 @@ import {
 import LoginModal from "../../../components/ModalCart/LoginModal";
 import ModalAddCart from "../../../components/ModalAddIntoCart/ModalAddCart";
 import FullScreenLoader from "../../../components/ReactSkeletonFull/SkeletonFull";
+import { URL_ELEPHANT } from "../../../utils/url";
+
 interface Product {
   id: number;
   name: string;
@@ -52,7 +54,7 @@ function Ssd() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/product?typeOfProductId=8",
+          `${URL_ELEPHANT}/api/product?typeOfProductId=8`,
           {
             method: "GET",
             headers: {

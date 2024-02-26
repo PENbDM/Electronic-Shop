@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
 import "./app.css";
+import { URL_ELEPHANT } from "../../utils/url";
 
 const CARD_OPTIONS = {
   iconStyle: "solid",
@@ -37,7 +38,7 @@ function PaymentForm({ totalPrice, products, setSuccess }) {
       try {
         const { id } = paymentMethod;
         console.log(id);
-        const response = await axios.post("http://localhost:5000/payment", {
+        const response = await axios.post(`${URL_ELEPHANT}/payment`, {
           amount: totalPrice * 100, // Stripe amount is in cents
           id,
           products, // pass the products array

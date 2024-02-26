@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
+import { URL_ELEPHANT } from "../../utils/url";
 
 interface CartItem {
   id: number;
@@ -25,7 +26,7 @@ export const fetchAllItemsCart = createAsyncThunk<CartItem[]>(
     try {
       const { user } = getState() as RootState;
       const token = user.user.token;
-      const { data } = await axios.get("http://localhost:5000/api/cart", {
+      const { data } = await axios.get(`${URL_ELEPHANT}/api/cart`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -53,7 +54,7 @@ export const addToCart = createAsyncThunk<
     const token = user.user.token;
 
     const { data } = await axios.post(
-      "http://localhost:5000/api/cart",
+      `${URL_ELEPHANT}/api/cart`,
       { productId },
       {
         headers: {
@@ -78,7 +79,7 @@ export const deleteCartItem = createAsyncThunk<
     const { user } = getState() as RootState;
     const token = user.user.token;
 
-    const { data } = await axios.delete("http://localhost:5000/api/cart", {
+    const { data } = await axios.delete(`${URL_ELEPHANT}/api/cart`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -103,7 +104,7 @@ export const updateCartItemQuantity = createAsyncThunk<
       const token = user.user.token;
 
       await axios.put(
-        "http://localhost:5000/api/cart",
+        `${URL_ELEPHANT}/api/cart`,
         {
           id,
           quantityAdjustment,
@@ -129,7 +130,7 @@ export const clearCart = createAsyncThunk<void, void, { rejectValue: any }>(
       const { user } = getState() as RootState;
       const token = user.user.token;
 
-      await axios.delete("http://localhost:5000/api/cart/clear", {
+      await axios.delete(`${URL_ELEPHANT}/api/cart/clear`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

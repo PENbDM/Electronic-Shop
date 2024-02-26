@@ -8,6 +8,8 @@ import { fetchUserOrders } from "../../redux/slices/orderSlice";
 import UserBlock from "./UserBlock";
 import { NavLink } from "react-router-dom";
 import { PRODUCT_ROUTE } from "../../utils/consts";
+import { URL_ELEPHANT } from "../../utils/url";
+
 interface Order {
   id: number;
   totalquantity: number;

@@ -4,6 +4,7 @@ import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { Root } from "react-dom/client";
 import { RootState } from "../store";
+import { URL_ELEPHANT } from "../../utils/url";
 
 interface Product {
   name: string;
@@ -38,7 +39,7 @@ export const fetchAllBrands = createAsyncThunk(
   "admin/fetchAllBrands",
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/brand");
+      const { data } = await axios.get(`${URL_ELEPHANT}/api/brand`);
       return data;
     } catch (error: any) {
       return rejectWithValue(error.response.data);
@@ -55,7 +56,7 @@ export const createBrand = createAsyncThunk(
       const token = user.user.token;
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/brand",
+        `${URL_ELEPHANT}/api/brand`,
         { name: brandName },
         {
           headers: {
@@ -79,7 +80,7 @@ export const createProduct = createAsyncThunk(
       const token = user.user.token;
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/product",
+        `${URL_ELEPHANT}/api/product`,
         productData,
         {
           headers: {

@@ -1,6 +1,7 @@
 // userSlice.ts
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
+import { URL_ELEPHANT } from "../../utils/url";
 
 import { RootState } from "../store";
 
@@ -31,7 +32,7 @@ export const fetchRegister = createAsyncThunk(
     const { name, email, password } = params;
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/user/registration",
+        `${URL_ELEPHANT}/api/user/registration`,
         {
           name: name,
           email: email,
@@ -50,13 +51,10 @@ export const fetchLogin = createAsyncThunk(
   async (params: LoginParams, { rejectWithValue }) => {
     const { email, password } = params;
     try {
-      const { data } = await axios.post(
-        "http://localhost:5000/api/user/login",
-        {
-          email: email,
-          password: password,
-        }
-      );
+      const { data } = await axios.post(`${URL_ELEPHANT}/api/user/login`, {
+        email: email,
+        password: password,
+      });
 
       return data;
     } catch (error: any) {

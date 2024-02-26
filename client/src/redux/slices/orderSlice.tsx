@@ -3,6 +3,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { RootState } from "../store";
+import { URL_ELEPHANT } from "../../utils/url";
 
 interface Order {
   id: number;
@@ -37,7 +38,7 @@ export const createOrder = createAsyncThunk(
       console.log(orderData);
 
       const response = await axios.post(
-        "http://localhost:5000/api/order",
+        `${URL_ELEPHANT}/api/order`,
         orderData,
         {
           headers: {
@@ -59,7 +60,7 @@ export const fetchUserOrders = createAsyncThunk(
     try {
       const { user } = getState() as RootState;
       const token = user.user.token;
-      const response = await axios.get("http://localhost:5000/api/order", {
+      const response = await axios.get(`${URL_ELEPHANT}/api/order`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

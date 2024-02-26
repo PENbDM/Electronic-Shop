@@ -16,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 import { ORDERS_ROUTE } from "../../utils/consts";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { URL_ELEPHANT } from "../../utils/url";
 interface CartProduct {
   id: number;
   quantity: number;
