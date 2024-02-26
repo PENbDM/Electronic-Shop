@@ -1,0 +1,10 @@
+import { Router } from "express";
+const cartRouter = new Router();
+import cartController from "../controllers/cartController.js";
+import checkRole from "../middleware/CheckRoleMiddleware.js";
+cartRouter.post("/", checkRole("USER"), cartController.addToCart);
+cartRouter.get("/", checkRole("USER"), cartController.getCartItems);
+cartRouter.delete("/", checkRole("USER"), cartController.deleteCartItem);
+cartRouter.put("/", checkRole("USER"), cartController.updateCartItemQuantity);
+cartRouter.delete("/clear", checkRole("USER"), cartController.clearCart);
+export default cartRouter;
