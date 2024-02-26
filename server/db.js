@@ -30,7 +30,7 @@ export const sequelize = new Sequelize({
   host: process.env.POSTGRES_HOST, // Use Vercel environment variable
   username: process.env.POSTGRES_USER, // Use Vercel environment variable
   password: process.env.POSTGRES_PASSWORD, // Use Vercel environment variable
-  database: process.env.POSTGRES_DB, // Use Vercel environment variable
+  database: process.env.POSTGRES_DATABASE, // Use Vercel environment variable
   port: process.env.POSTGRES_PORT, // Use Vercel environment variable
   logging: console.log,
 });
