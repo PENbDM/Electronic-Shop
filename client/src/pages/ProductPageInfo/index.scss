@@ -1,0 +1,320 @@
+.wrapperrs {
+  margin: 0 auto;
+  max-width: 1600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.leftSidee {
+  margin-left: 15px;
+  width: 50%;
+  display: flex;
+  justify-content: center; // Center the content horizontally
+}
+.imgBlockk {
+  border: 2px solid #e5e5e5;
+  border-radius: 0;
+  padding: 20px; // Distance from the image to the border
+  display: flex;
+  height: 450px;
+  width: 450px;
+  justify-content: center;
+  align-items: center; // Center the content vertically
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.rightSide {
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  .rating {
+    margin-top: 5px;
+  }
+}
+.makeOrderBlock2 {
+  padding: 10px; // Distance from the image to the border
+  border: 2px solid #e5e5e5;
+  border-radius: 0;
+  margin-top: 40px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.makeOrderBlock {
+  padding: 10px; // Distance from the image to the border
+  border: 2px solid #e5e5e5;
+  border-radius: 0;
+  margin-top: 40px;
+  width: 300px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  button {
+    background: none;
+    color: inherit;
+    border: none;
+  }
+  .makeOrderButton {
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    width: 125px;
+    height: 40px;
+    background-color: #03b14e;
+    justify-content: center;
+    text-align: center;
+
+    // Add the following style rule to set the text color to white
+    color: white;
+    &:hover {
+      background-color: #1bc423; /* Darker green color on hover */
+    }
+  }
+}
+.btn-trash {
+  height: 100px;
+  cursor: pointer;
+}
+.productPrice {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+.makeOrderButton {
+  font-size: 20px;
+  p {
+    margin-left: 5px;
+    color: white;
+    margin-bottom: 3px;
+  }
+}
+.wrap {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; // Добавьте эту строку
+}
+
+.description {
+  margin-left: 30px;
+  margin-right: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  ul {
+    list-style-type: none; // Remove default list style
+    padding: 0; // Remove default padding
+    margin: 0; // Remove default margin
+  }
+  h2 {
+    padding-bottom: 20px;
+  }
+  li {
+    width: 400px;
+  }
+}
+.bullshit {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  width: 324px;
+  height: 70px;
+  p {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 1108px) {
+  .wrap {
+    margin: 50px auto 0;
+
+    .leftSidee {
+      width: 450px;
+      margin-right: 30px;
+    }
+    .rightSide {
+      width: 450px;
+    }
+  }
+}
+@media (max-width: 971px) {
+  .wrap {
+    height: 460px;
+    margin: 50px auto 0;
+
+    .leftSidee {
+      width: 400px;
+      margin-right: 30px;
+      .imgBlockk {
+        height: 410px;
+      }
+    }
+    .rightSide {
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 861px) {
+  .wrap {
+    height: 460px;
+    margin: 50px auto 0;
+    .leftSidee {
+      width: 350px;
+      margin-right: 30px;
+      .imgBlockk {
+        height: 410px;
+      }
+    }
+    .rightSide {
+      width: 350px;
+    }
+  }
+}
+
+@media (max-width: 759px) {
+  .wrap {
+    height: 370px;
+    margin: 50px auto 0;
+    .leftSidee {
+      width: 300px;
+      margin-right: 30px;
+
+      .imgBlockk {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 250px;
+        text-align: center;
+      }
+    }
+    .rightSide {
+      width: 300px;
+      .productInfo {
+        font-size: 12px;
+      }
+      .makeOrderBlock {
+        margin-top: 20px;
+        height: 120px;
+      }
+      .bullshit {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 727px) {
+  .wrapperrs {
+    .wrap {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      height: 750px;
+    }
+
+    .leftSidee {
+      width: 350px;
+      margin: 0 auto;
+      .imgBlockk {
+        width: 100%;
+      }
+    }
+
+    .rightSide {
+      margin: 0 auto;
+      .productInfo {
+        margin: 20px auto 0;
+      }
+      .makeOrderBlock {
+        align-self: center;
+      }
+      .bullshit {
+        align-self: center;
+      }
+    }
+    .description {
+      margin: 25px auto 0;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .wrapperrs {
+    .wrap {
+      width: 300px;
+    }
+    .leftSidee {
+      width: 300px;
+      margin: 0 auto;
+      .imgBlockk {
+        width: 100%;
+      }
+    }
+    .rightSide {
+      margin: 0 auto;
+      .productInfo {
+        width: 250px;
+        margin: 20px auto 0;
+      }
+      .makeOrderBlock {
+        width: 250px;
+        align-self: center;
+      }
+      .bullshit {
+        width: 250px;
+        align-self: center;
+      }
+    }
+    .description {
+      li {
+        width: 270px;
+      }
+    }
+  }
+}
+
+.payment {
+  display: flex;
+  border: 2px solid #e5e5e5;
+  border-radius: 0;
+  padding: 5px;
+  img {
+    margin-top: 10px;
+  }
+}
+.garanty {
+  display: flex;
+  border: 2px solid #e5e5e5;
+  border-radius: 0;
+  padding: 5px;
+  border-top: none; // Add this line to remove the top border
+  img {
+    margin-top: 10px;
+  }
+}
+.bold {
+  font-weight: 700;
+}
+
+.desc {
+  margin-bottom: 50px;
+  li {
+    border: 2px solid #e5e5e5;
+    margin-bottom: 10px;
+    border-radius: 0;
+    list-style-type: none; // Remove default list style
+  }
+}

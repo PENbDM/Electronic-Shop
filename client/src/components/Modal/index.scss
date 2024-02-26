@@ -1,0 +1,221 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.modal.open {
+  display: block;
+}
+
+.modal .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal .modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 450px;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal .modal-content .modal-header {
+  height: 30px;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal .modal-content .modal-header .close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.modal .modal-content .modal-header .close-btn:hover {
+  color: #333;
+}
+
+.modal .modal-content .modal-body h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.modal .modal-content .modal-body .tab {
+  display: none;
+}
+
+.modal .modal-content .modal-body .tab.active {
+  display: block;
+}
+
+.modal .modal-content .modal-body form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.modal .modal-content .modal-body form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.modal .modal-content .modal-body form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.modal .modal-content .modal-body form input:focus {
+  border-color: #4caf50;
+}
+
+.modal .modal-content .modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal .modal-content .modal-footer button {
+  padding: 12px;
+  width: 48%;
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.modal .centered-button {
+  text-align: center;
+}
+
+.modal .create-account-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 15px;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}
+
+.modal .create-account-text button {
+  width: 80px;
+  margin-top: 10px;
+}
+
+.modal button {
+  display: inline-block;
+  padding: 12px;
+  width: 100%;
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.modal .centered-button button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.modal .create-account-text a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.create-account-button {
+  width: 40px;
+}
+
+.wrappp {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.error-message {
+  font-weight: 500;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  .modal .modal-content {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .modal .modal-content .modal-footer button {
+    width: 100%;
+  }
+
+  .modal .centered-button button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal .modal-content {
+    width: 90%;
+    max-width: none;
+    padding: 10px;
+  }
+}
+
+.centered-button {
+  width: 300px;
+}
+
+.modal .create-account-text button {
+  width: 200px;
+}
+.testDriveLogin {
+  margin-top: 10px;
+  text-align: center;
+}

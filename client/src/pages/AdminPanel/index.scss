@@ -1,0 +1,268 @@
+.AdminGrid {
+  width: 1570px;
+  margin: 0 auto;
+  display: grid;
+}
+.AdmitTitle {
+  font-size: 25px;
+  font-weight: 600;
+}
+.adminPower {
+  border: 2px solid #ccc;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 15%) 70%;
+  height: 50px;
+}
+
+.adminTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-right: 2px solid #ccc; /* Add a right border to adminTitle */
+}
+.LogOut {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-headerBrand {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.blockOfAdmin {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // Create 4 equal-width columns
+  gap: 20px; // Add gap between grid items (buttons)
+
+  .btn_Brand,
+  .get_btn_Brand,
+  .btn_Product,
+  .get_btn_Product {
+    background-color: #4caf50; /* Green color */
+    color: #ffffff; /* White text color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #45a049; /* Darker green color on hover */
+    }
+    grid-column: span 1; // Each button spans 1 column
+    width: 100%; // Make each button take up the full width of its column
+  }
+}
+.btn-logout {
+  background-color: #4caf50; /* Green color */
+  color: #ffffff; /* White text color */
+  width: 100px;
+  height: 45px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #45a049; /* Darker green color on hover */
+  }
+}
+
+//PRODUCT CREATE MENU//
+.modal-headerProd {
+  margin-bottom: 10px;
+  justify-content: space-between;
+  display: flex;
+}
+.modal-headerBrands {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  display: flex;
+}
+.createProductMenu {
+  margin-bottom: 100px;
+  margin-top: 40px;
+  border: 2px solid #ccc;
+  display: grid;
+  grid-template-rows: auto; /* Set rows to auto to allow dynamic height */
+}
+.wrapperProductMenu {
+  width: 80%;
+  margin: 0 auto;
+}
+.modal-header-product {
+  height: 20px;
+  justify-content: end;
+  display: grid;
+}
+.close-btn {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
+}
+.close-btnn {
+  margin-bottom: 10px;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
+}
+.createProductTitle {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.close-btn::before {
+  content: "×";
+}
+.close-btnn::before {
+  content: "×";
+}
+
+.blockOfInputSelect {
+  display: grid;
+  grid-template-rows: auto; /* Set rows to auto to allow dynamic height */
+}
+.inputCreateP {
+  height: 33px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.inputTitleDesc {
+  width: 300px;
+  height: 33px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.inputDescri {
+  margin-left: 30px;
+  width: 320px;
+  height: 33px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.removeDescription {
+  margin-left: 10px;
+  background-color: #4caf50; /* Green color */
+  color: #ffffff; /* White text color */
+  width: 100px;
+  height: 37px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #45a049; /* Darker green color on hover */
+  }
+}
+
+.blockOfDescriptions {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.singleBlockOfDesc {
+  display: flex;
+  flex-direction: column; /* Change flex-direction to column */
+}
+.singleBlockOfDescription {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.blockInputDescAndError {
+  display: flex;
+  align-items: center; /* Center items horizontally */
+
+  flex-direction: column;
+}
+.pErrorDescription {
+  margin-left: 29px;
+}
+.blockInputTitleDescAndError {
+  display: flex;
+  flex-direction: column;
+}
+.selectBrand {
+  margin-top: 5px;
+
+  height: 33px;
+  margin-bottom: 5px;
+}
+.selectType {
+  margin-top: 5px;
+
+  height: 33px;
+  margin-bottom: 5px;
+}
+.btn-add-descr {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.addDescription {
+  background-color: #4caf50; /* Green color */
+  color: #ffffff; /* White text color */
+  width: 30%;
+  height: 37px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  &:hover {
+    background-color: #45a049; /* Darker green color on hover */
+  }
+}
+.add-product {
+  background-color: #4caf50; /* Green color */
+  color: #ffffff; /* White text color */
+  width: 30%;
+  height: 37px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  &:hover {
+    background-color: #45a049; /* Darker green color on hover */
+  }
+}
+.btn-createProduct {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+//PRODUCT CREATE MENU//
+
+//CREATE BRAND MENU//
+.createBrandMenu {
+  padding: 20px;
+  margin: 40px auto 0;
+  width: 400px;
+  display: grid;
+  border: 2px solid #ccc;
+}
+.titleBrand {
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+.inputBrandName {
+  height: 33px;
+}
+.errorAdmin {
+  margin-bottom: 4px;
+}
+.toggleBtnBrand {
+  margin-top: 10px;
+}
+//CREATE BRAND MENU//

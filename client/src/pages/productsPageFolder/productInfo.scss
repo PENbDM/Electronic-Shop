@@ -1,0 +1,271 @@
+.wraapper {
+  margin: 0 auto;
+  max-width: 1600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1082px) {
+  .price {
+    .sliderPrice {
+      .sliderPriceBox {
+        width: 179px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .price {
+    .sliderPrice {
+      .sliderPriceBox {
+        width: 160px;
+      }
+    }
+  }
+  .left {
+    .brand {
+      width: 203px;
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .price {
+    .sliderPrice {
+      display: none;
+      .sliderPriceBox {
+        display: none;
+      }
+    }
+  }
+
+  .wraapper {
+    .productsBlock {
+      display: flex;
+      flex-direction: column;
+    }
+    .left {
+      margin-left: 0px;
+      width: 100%;
+      .brand {
+        width: 300px;
+        margin: 0 auto;
+        li {
+          display: flex;
+          justify-content: center;
+          label {
+            width: 100px;
+            display: flex;
+            align-items: center; /* Align items vertically in the center */
+            input {
+              transform: scale(2); /* Change the scale value as needed */
+            }
+            .textBrand {
+              font-size: 50px;
+            }
+            .textCheckBox {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      width: 100%;
+      .items {
+        width: 95%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media (max-width: 478px) {
+  .topInfo {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    .categoryName {
+      margin-bottom: 18px;
+    }
+  }
+}
+@media (max-width: 417px) {
+  .topInfo {
+    .custom-select {
+      margin-right: 0px;
+      select {
+        width: 300px;
+      }
+    }
+  }
+}
+@media (max-width: 417px) {
+  .wraapper {
+    .productsBlock {
+    }
+    .left {
+      .brand {
+        width: 270px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.topInfo {
+  margin-top: 20px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.categoryName {
+  font-size: 23px;
+  font-weight: 500;
+}
+.custom-select {
+  select {
+    width: 341px;
+    height: 48px;
+  }
+}
+.productsBlock {
+  display: flex;
+  flex-direction: row;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-left: 10px;
+  width: 30%;
+}
+
+.brand {
+  width: 220px;
+  border: 2px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 10px;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+
+  li {
+    list-style-type: none;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    label {
+      display: flex;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+
+      &:checked + span {
+        background-color: green;
+        color: white;
+      }
+    }
+  }
+
+  :hover {
+    background-color: rgb(238, 238, 238);
+  }
+}
+
+.custom-select {
+  margin-right: 20px;
+}
+
+.right {
+  display: flex;
+  margin-top: 40px;
+  margin-right: 20px;
+  width: 70%;
+  margin-left: auto;
+}
+
+.items {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.item-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.item {
+  height: 380px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #e5e5e5;
+  border-radius: 0;
+  padding: 20px 15px 20px;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(166, 166, 166, 0.4);
+    transform: scale(1.01);
+  }
+
+  .img {
+    height: 191px;
+  }
+
+  .name,
+  .price {
+    font-weight: 500;
+  }
+
+  img {
+    height: 191px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .name {
+    height: 95px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+  .nameLaptops {
+    height: 100px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+  button {
+    align-self: flex-start; // Adjust the button alignment as needed
+  }
+}
+
+.border {
+  margin-top: 5px;
+  width: 100%;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.price {
+  margin-bottom: 6px;
+}
+.add-to-basket {
+  width: 100%;
+  background-color: #4caf50; /* Green color */
+  color: #ffffff; /* White text color */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #45a049; /* Darker green color on hover */
+  }
+}

@@ -1,0 +1,305 @@
+.cartBlock {
+  display: flex;
+  max-width: 1600px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.wrapperCart {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  flex-direction: row;
+}
+.YouRCart {
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.blockCartIsEmpty {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.textEmptyCart {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.wrapperCartt {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+.cartLeft {
+  padding: 20px;
+  margin-left: 15px;
+  margin-right: 50px;
+  border-radius: 7px;
+  border: 1px solid gray;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.blockOfCartProduct {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.cartBlockImg {
+  width: 40%;
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
+}
+.cartBlockDesc {
+  margin-left: 80px;
+  width: 60%;
+}
+.cartRight {
+  border-radius: 7px;
+  border: 1px solid gray;
+  margin-right: 24px;
+  width: 30%;
+  .PaymentBlock {
+    display: flex;
+    flex-direction: column;
+    .totalPriceBlockkkk {
+      padding: 10px;
+      font-size: 25px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.btn-come-back-home {
+  margin-top: 5px;
+  background-color: #4caf50; /* Green color */
+  color: #ffffff; /* White text color */
+  border: none;
+  padding: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-size: 25px;
+  &:hover {
+    background-color: #45a049; /* Darker green color on hover */
+  }
+}
+.btn-add-remove {
+  background-color: #4caf50; /* Green color */
+  color: #ffffff; /* White text color */
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 60px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-size: 25px;
+  &:hover {
+    background-color: #45a049; /* Darker green color on hover */
+  }
+}
+.btn-add-removeee {
+  background-color: #4caf50; /* Green color */
+  color: #ffffff; /* White text color */
+  border: none;
+  padding-top: 17px;
+  margin-left: 40px;
+  padding-bottom: 17px;
+  width: 100px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #45a049; /* Darker green color on hover */
+  }
+}
+.BlockSomeCART {
+  margin-top: 30px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+.blockQuantity {
+  gap: 20px;
+  width: 50%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  p {
+    font-size: 20px;
+  }
+}
+.blockREmove {
+  display: flex;
+  width: 25%;
+}
+.blockPrice {
+  justify-content: center;
+  display: flex;
+  width: 25%;
+  p {
+    font-size: 20px;
+  }
+}
+.someDeliveryInfo {
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid gray;
+  margin-top: 30px;
+  img {
+    margin-right: 10px;
+  }
+}
+.blockofDelivery {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  img {
+    margin-right: 10px;
+  }
+}
+
+.blockofStock {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+@media (max-width: 1280px) {
+  .blockOfCartProduct {
+    display: flex;
+    flex-direction: column;
+    .cartBlockImg {
+      width: 100%;
+      margin: 0 auto 10px;
+      img {
+        width: 100%;
+      }
+    }
+
+    .cartBlockDesc {
+      margin: 0 auto;
+    }
+  }
+  .cartLeft {
+    width: 60%;
+  }
+  .cartRight {
+    width: 40%;
+  }
+}
+@media (max-width: 1200px) {
+  .cartItemName {
+    text-align: center;
+  }
+  .someDeliveryInfo {
+    margin: 20px auto 0;
+  }
+  .BlockSomeCART {
+    display: flex;
+    margin-bottom: 15px;
+    flex-direction: column;
+    .blockQuantity {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      .btn-add-remove {
+        width: 100px;
+      }
+    }
+    .blockREmove {
+      width: 100%;
+      button {
+        margin: 10px auto;
+      }
+    }
+  }
+  .someDeliveryInfo {
+    padding: 20px;
+
+    margin: 0 auto;
+    p {
+      font-size: 20px;
+    }
+  }
+}
+@media (max-width: 1070px) {
+  .cartRight {
+    .PaymentBlock {
+      .fakeDetails {
+        display: flex;
+        flex-direction: column;
+        .firstFake {
+          display: flex;
+          text-align: center;
+          flex-direction: column;
+        }
+        .secondFake {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1070px) {
+  .cartLeft {
+    width: 50%;
+  }
+  .cartRight {
+    width: 50%;
+  }
+}
+@media (max-width: 800px) {
+  .wrapperCart {
+    display: flex;
+    flex-direction: column-reverse;
+    .someDeliveryInfo {
+      margin: 20px auto 0;
+    }
+    .cartLeft {
+      width: 60%;
+      display: flex;
+      margin: 0 auto;
+    }
+
+    .cartRight {
+      width: 60%;
+      display: flex;
+      margin: 0 auto 25px;
+      .PaymentBlock {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 640px) {
+  .wrapperCart {
+    .cartRight {
+      padding: 10px;
+      width: 90%;
+    }
+    .cartLeft {
+      padding: 10px;
+      width: 90%;
+    }
+  }
+}
+@media (max-width: 381px) {
+  .BlockSomeCART {
+    .QunatityBlock {
+      text-align: center;
+    }
+  }
+}

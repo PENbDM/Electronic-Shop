@@ -1,0 +1,14 @@
+export const ADMIN_ROUTE = "/admin";
+export const HOME_ROUTE = "/";
+export const CART_ROUTE = "/cart";
+export const PRODUCT_ROUTE = "/product";
+export const MONITOR_ROUTE = "/monitors";
+export const Laptop_ROUTE = "/laptop";
+export const Processor_ROUTE = "/processor";
+export const VideoGraphicsCard_ROUTE = "/videocards";
+export const Ram_ROUTE = "/ram";
+export const SSD_ROUTE = "/ssd";
+export const Motherboard_ROUTE = "/motherboard";
+export const USER_ROUTE = "/user";
+export const ORDERS_ROUTE = "/orders";
+export const PERSONAL_DETAILS = "/personal-info";
