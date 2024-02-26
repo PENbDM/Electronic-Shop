@@ -1,7 +1,7 @@
 import ApiError from "../error/ApiError.js";
 import dotenv from "dotenv";
 dotenv.config();
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs"; // Change the import
 import jwt from "jsonwebtoken";
 import { User, Cart } from "../models/models.js";
 
