@@ -282,7 +282,9 @@ function Home() {
           {promItems.length === 0 ? (
             <div className="PromotionalItemsBlock">
               {Array.from({ length: 24 }).map((_, index) => (
-                <MyLoader />
+                <div className="PromotionalItem" key={index}>
+                  <MyLoader />
+                </div>
               ))}
             </div>
           ) : (
