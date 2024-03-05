@@ -38,7 +38,7 @@ dotenv.config();
 // });
 
 //planeta.com
-export const sequelize = new Sequelize(process.env.VERCEL_DB_URL_POSTGRESQL_URL, {
+export const sequelize = new Sequelize(process.env.POSTGRES_URL, {
   dialectOptions: {
     ssl: {
       require: true,
