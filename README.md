@@ -4,8 +4,8 @@ Here, you can log in/register, select the right category of products, and sort b
 
 In this app, I've been using the following technologies:
 
-Frontend: React, Redux, TypeScript, Sass
-Backend: Express, PostgreSQL, Sequelize
+- Frontend: React, Redux, TypeScript, Sass
+- Backend: Express, PostgreSQL, Sequelize
 For hosting, I used Vercel. 🚀
 
 Feel free to explore our platform and enjoy your shopping experience! If you have any questions or need assistance, don't hesitate to ask. Happy shopping! 🎉
