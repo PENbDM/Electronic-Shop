@@ -28,7 +28,7 @@ app.post("/payment", cors(), async (req, res) => {
       description: "Spatula company",
       payment_method: id,
       confirm: true,
-      return_url: "http://localhost:3000/cart", // Set your desired return URL here
+      return_url: "https://power-shop-client.vercel.app/cart", // Set your desired return URL here
     });
     console.log("Payment", payment);
     res.json({
